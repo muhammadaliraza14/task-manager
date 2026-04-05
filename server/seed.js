@@ -14,7 +14,7 @@ const Task = require("./src/models/Task");
     email: "admin@example.com",
     passwordHash: await bcrypt.hash("123456", 10),
     role: "admin"
-  });
+  }); 
 
   const user = await User.create({
     email: "user@example.com",
@@ -26,6 +26,6 @@ const Task = require("./src/models/Task");
     { title: "Admin Task", owner: admin._id }
   ]);
 
-  console.log("Seeded");
+  console.log("Seeded"); 
   process.exit();
 })();
